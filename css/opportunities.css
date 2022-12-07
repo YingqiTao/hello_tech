@@ -1,0 +1,173 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.skip a {
+    background: white;
+    color: black;
+    top: -40px;
+    left: 0;
+    padding: 10px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 20px;
+}
+
+.header_content {
+    background-color: #D14F7B; /* #193337; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_content h1, a {
+    color: black;
+}
+
+.header_content h1 {
+    padding: 20px 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#opportunities {
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.navigation_links li {
+    font-size: 20px;
+}
+
+*:focus {
+    border: 3px solid #000000;
+}
+
+#main {
+    background-color: #F1ABB9; /* #EFD5D0; */
+}
+
+#main>h1 {
+    font-size: 40px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#main>p {
+    font-size: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.container div {
+    width: 90%;
+    padding: 5px;
+    border: 4px solid #F6EF7C;
+}
+
+.container h2 {
+    font-size: 32px;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+}
+
+.container img {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+footer {
+    background-color: #D14F7B;
+    color: black;
+    padding: 20px 10px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        /* Removes scroll animation */
+    }
+
+    .skip a {
+        -webkit-transition: none;
+        /* sets to default setting */
+        transition: none;
+        /* sets to default setting */
+    }
+}
+
+/* Since the tablet screen resolution varies between 768px and 1280px in width,
+we set the min-width of tablet website viewport to be 700px */
+@media screen and (min-width: 700px) {
+    .navigation_links {
+        flex-direction: row;
+        /* flex-wrap: ; */
+        justify-content: space-between;
+    }
+
+    .navigation_links li {
+        padding: 7px 20px;
+        font-size: 25px;
+    }
+
+    .container div {
+        width: 43%;
+        padding: 10px;
+        border: 4px solid #F6EF7C;
+    }
+
+    #main>p {
+        font-size: 25px;
+    }
+
+    .container p {
+        font-size: 25px;
+    }
+}
+
+/* Since 1280px and 1920px are the two standard widths for web design,
+we set the min-width of laptop website view to be 1200px */
+@media screen and (min-width: 1200px) {
+    .header_content {
+        flex-direction: row;
+        /* flex-wrap: ; */
+        justify-content: space-between;
+    }
+
+    .header_content h1 {
+        padding: 20px 20px;
+    }
+
+    .container div {
+        width: 27%;
+        padding: 20px;
+    }
+}
