@@ -45,13 +45,13 @@ html {
 }
 
 #opportunities {
-    padding: 10px;
     font-weight: bold;
     border: 2px solid black;
 }
 
 .navigation_links li {
     font-size: 20px;
+    padding: 5px;
 }
 
 *:focus {
